@@ -284,6 +284,30 @@ a{
     border-radius: 10px;
 }
 
+.box .text-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: transparent;
+    margin-top: 25px;
+}
+
+.box p{
+    margin: 0 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.text-box{
+    display: flex;
+    background-color: #6d81c4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 #Contact{
     display: flex;
     justify-content: center;
@@ -312,7 +336,7 @@ a{
     font-size: 1.4rem;
 }
 
-.email{
+.email, .project{
     font-family: "Montserrat";
     font-weight: 600;
     font-size: 1.8rem;
@@ -320,7 +344,7 @@ a{
     margin-bottom: 1rem;
 }
 
-.email a{
+.email a, .project a{
     text-decoration: none;
     font-size: 1.6rem;
     color: #28345a;
@@ -330,7 +354,7 @@ a{
     margin-top: 1px;
 }
 
-.email-link{
+.email-link, .project-link{
     display: inline-block;
     padding: 20px 40px;
     border: 2px solid transparent;
@@ -341,7 +365,7 @@ a{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.email-link:hover{
+.email-link:hover, .project-link:hover{
     background: linear-gradient(90deg, #7355ff, #45abff);
     color: white;
     border-image: none;
