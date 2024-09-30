@@ -512,24 +512,42 @@ a{
     }
 
     #Contact{
-        padding-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
-
-    .contact-subIntro{
-        margin: 0 5rem;
+    
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
         font-size: 1rem;
     }
-
+    
     .contact-subIntro p{
-        margin-left: 5rem;
-        text-align: center;
-        width: 25rem;
+        margin: 0 5rem;
+        font-weight: 400;
     }
 }
 
 @media(max-width: 480px){
+    .nav-logo{
+        margin-left: -2.3rem;
+    }
+
     .hamburger{
-        margin-right: -2rem;
+        display: block;
+        margin-right: -4.5rem;
     }
 
     .greeting, .name{
@@ -559,10 +577,6 @@ a{
         font-size: 2rem;
     }
 
-    .project-subIntro{
-        font-size: 1rem;
-    }
-
     .wrapper{
         margin: 10px auto;
     }
@@ -575,16 +589,44 @@ a{
         padding: 15px;
     }
 
-    .box img{
-        max-height: 100px;
+    .box img {
+        width: 100%;
+        height: auto; 
+        max-height: 250px;
+        border-radius: 8px; 
+        object-fit: contain;
+        margin-bottom: 10px; 
     }
 
     .project a{
         font-size: 0.7rem;
     }
 
-    .contact-subIntro{
-        margin: 0 6rem;
-        font-size: 0.9rem;
+    #Contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1rem;
+    }
+    
+    .contact-subIntro p{
+        margin: 0 3rem;
+        font-weight: 400;
     }
 }
