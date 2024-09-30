@@ -425,10 +425,6 @@ a{
         padding-right: 0;
     }
 
-    .profile {
-
-    }
-
     .greeting, .name {
         font-size: 3rem;
     }
@@ -470,5 +466,61 @@ a{
         height: 300px; 
         object-fit: cover;
         border-radius: 50%; 
+    }
+
+    #Project{
+        padding-top: 20rem;
+    }
+    
+    .project-intro, .contact-intro{
+        margin-top: -7rem;
+        font-size: 2.5rem;
+    }
+
+    .project-subIntro, .contact-subIntro{
+        font-size: 1.2rem;
+        margin-bottom: 5rem;
+    }
+
+    .wrapper {
+        margin: 20px auto;
+        padding: 0 20px; 
+    }
+    
+    .container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .box {
+        padding: 20px;
+        text-align: justify;
+        border-radius: 12px;
+        background: linear-gradient(120deg, #D1E8F8, #A2C2E0, #E0C2E0);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+        font-family: 'Poppins', sans-serif;
+        transition: transform 0.3s; 
+    }
+    
+    .box:hover {
+        transform: translateY(-5px);
+    }
+    
+    .box img {
+        width: 100%;
+        height: auto; 
+        max-height: 250px;
+        border-radius: 8px; 
+        object-fit: contain;
+        margin-bottom: 10px; 
+    }
+
+    #Contact{
+        padding-top: 30rem;
+    }
+
+    .contact-subIntro{
+        margin: 0 8rem;
     }
 }
