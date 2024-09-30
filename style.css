@@ -374,6 +374,11 @@ a{
 }
 
 @media(max-width:768px){
+    html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    }
+    
     .hamburger{
         display: block;
         margin-right: -3.5rem;
@@ -535,6 +540,11 @@ a{
 }
 
 @media(max-width: 480px){
+    html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    }
+    
     .hamburger{
         margin-right: -2rem;
     }
