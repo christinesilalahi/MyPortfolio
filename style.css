@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width: 100vw;
 }
 
 html {
@@ -103,11 +104,6 @@ a{
     transition: 0.5s ease;
 }
 
-/* .Hello {
-    display: flex;
-    justify-content: center;
-} */
-
 .Hello-container {
     display: flex;
     width: 100%;
@@ -117,7 +113,6 @@ a{
 .Hello-content {
     flex: 1;
     padding-right: 15rem;
-    /* padding-top: 5px; */
 }
 
 .social-media {
@@ -190,7 +185,7 @@ a{
     padding-right: 20px;
 }
 
-.social-media{
+.social-media, .social-media-contact{
     font-size: 70px;
     margin-top: 30px;
     margin-left: -10px;
@@ -199,15 +194,15 @@ a{
     gap: 40px;
 }
 
-.social-media a:nth-child(1) i {
+.social-media a:nth-child(1) i , .social-media-contact a:nth-child(1) i {
     color: #e1306c;
 }
 
-.social-media a:nth-child(2) i {
+.social-media a:nth-child(2) i , .social-media-contact a:nth-child(2) i {
     color: #0a66c2;
 }
 
-.social-media a:nth-child(3) i {
+.social-media a:nth-child(3) i , .social-media-contact a:nth-child(3) i {
     color: #333;
 }
 
@@ -215,7 +210,11 @@ a{
     width: 100%;
 }
 
-.project-intro{
+#Project{
+    padding-top: 180px;
+}
+
+.project-intro, .contact-intro{
     font-family: "Montserrat";
     font-size: 4.2rem;
     font-weight: 600;
@@ -224,7 +223,7 @@ a{
     color: #28345a;
 }
 
-.project-subIntro{
+.project-subIntro, .contact-subIntro{
     font-family: "Montserrat";
     font-size: 1.8rem;
     font-weight: 500;
@@ -274,9 +273,115 @@ a{
     border-radius: 10px;
 }
 
+.box .text-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: transparent;
+    margin-top: 25px;
+}
+
+.box p{
+    margin: 0 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.text-box{
+    display: flex;
+    background-color: #6d81c4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#Contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-subIntro p{
+    margin: 0 20rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.email, .project{
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.email a, .project a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #28345a;
+}
+
+.social-media-contact{
+    margin-top: 1px;
+}
+
+.email-link{
+    display: inline-block;
+    padding: 20px 40px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background: transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(90deg, #7355ff, #514aff, #45abff) 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-link:hover{
+    background: linear-gradient(90deg, #7355ff, #45abff);
+    color: white;
+    border-image: none;
+}
+
+.project-link{
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background: transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(90deg, #7355ff, #514aff, #45abff) 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover{
+    background: linear-gradient(90deg, #7355ff, #45abff);
+    color: white;
+    border-image: none;
+    transform: scale(1.15);
+}
+
 @media(max-width:768px){
     .hamburger{
         display: block;
+        margin-right: -3.5rem;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -310,5 +415,236 @@ a{
 
     .nav-menu.active{
         left: 0;
+    }
+
+    .nav-logo{
+        margin-left: -1.8rem;
+    }
+
+    .Hello-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 3rem;
+    }
+
+    .Hello-content {
+        padding-right: 0;
+    }
+
+    .greeting, .name {
+        font-size: 3rem;
+    }
+
+    .desc {
+        font-size: 1.2rem;
+        max-width: 44%;
+        
+    }
+
+    .introduction{
+        text-align: justify;
+        font-size: 1.2rem;
+        margin-right: -1rem;
+    }
+
+    .social-media {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .profile {
+        flex: 0 0 auto;
+        border: 2px solid #cccccc;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-left: 0;
+        order: -1;
+        margin-bottom: 3.5rem;
+        margin-top: -2.5rem;
+    }
+    
+    .profile-image {
+        width: 300px;
+        height: 300px; 
+        object-fit: cover;
+        border-radius: 50%; 
+    }
+
+    #Project{
+        padding-top: 20rem;
+    }
+    
+    .project-intro, .contact-intro{
+        margin-top: -7rem;
+        font-size: 2.5rem;
+    }
+
+    .project-subIntro{
+        font-size: 1.2rem;
+        margin-bottom: 5rem;
+    }
+
+    .wrapper {
+        margin: 20px auto;
+        padding: 0 20px; 
+    }
+    
+    .container {
+        display: grid;
+        gap: 30px;
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+        grid-template-columns: 1fr;
+        padding: 8px;
+    }
+    
+    .box {
+        padding: 20px;
+        text-align: justify;
+        border-radius: 12px;
+        background: linear-gradient(120deg, #D1E8F8, #A2C2E0, #E0C2E0);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+        font-family: 'Poppins', sans-serif;
+        transition: transform 0.3s; 
+    }
+    
+    .box:hover {
+        transform: translateY(-5px);
+    }
+    
+    .box img {
+        width: 100%;
+        height: auto; 
+        max-height: 250px;
+        border-radius: 8px; 
+        object-fit: contain;
+        margin-bottom: 10px; 
+    }
+    
+    .project a{
+        font-size: 0.8rem;
+    }
+
+    #Contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1rem;
+    }
+    
+    .contact-subIntro p{
+        margin: 0 5rem;
+        font-weight: 400;
+    }
+}
+
+@media(max-width: 480px){
+    .nav-logo{
+        margin-left: -2.3rem;
+    }
+
+    .hamburger{
+        display: block;
+        margin-right: -4.5rem;
+    }
+
+    .greeting, .name{
+        font-size: 2.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+        max-width: 70%;
+    }
+
+    .introduction{
+        font-size: 1rem;
+    }
+
+    .profile{
+        margin-bottom: 15px;
+        padding: 5px;
+    }
+
+    .profile-image{
+        width: 250px;
+        height: 250px;
+    }
+
+    .project-intro, .contact-intro{
+        font-size: 2rem;
+    }
+
+    .wrapper{
+        margin: 10px auto;
+    }
+
+    .container{
+        padding: 4px;
+    }
+
+    .box{
+        padding: 15px;
+    }
+
+    .box img {
+        width: 100%;
+        height: auto; 
+        max-height: 250px;
+        border-radius: 8px; 
+        object-fit: contain;
+        margin-bottom: 10px; 
+    }
+
+    .project a{
+        font-size: 0.7rem;
+    }
+
+    #Contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1rem;
+    }
+    
+    .contact-subIntro p{
+        margin: 0 3rem;
+        font-weight: 400;
     }
 }
