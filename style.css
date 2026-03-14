@@ -473,6 +473,165 @@ a   { color: var(--text-primary); text-decoration: none; }
 .pill .bxl-github      { color: #f0f6fc; }
 .pill .bxl-figma       { color: #f24e1e; }
 
+/* --- SECTION: EXPERIENCE --- */
+#Experience {
+    padding: 100px 8rem;
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.experience-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.experience-timeline {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.exp-card {
+    display: flex;
+    gap: 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    padding: 32px 36px;
+    transition: var(--transition);
+}
+
+.exp-card:hover {
+    border-color: rgba(115, 85, 255, 0.45);
+    box-shadow: 0 16px 50px rgba(115, 85, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.exp-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.exp-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(115, 85, 255, 0.15);
+    border: 1px solid rgba(115, 85, 255, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #a78bfa;
+    flex-shrink: 0;
+}
+
+/* Org cards get a teal accent to distinguish from work experience */
+.exp-logo.org {
+    background: rgba(69, 211, 171, 0.12);
+    border-color: rgba(69, 211, 171, 0.35);
+    color: #45d3ab;
+}
+
+.exp-line {
+    flex: 1;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(115,85,255,0.4), transparent);
+    border-radius: 2px;
+    min-height: 20px;
+}
+
+.exp-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exp-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.exp-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #a78bfa;
+    background: rgba(115, 85, 255, 0.12);
+    border: 1px solid rgba(115, 85, 255, 0.25);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.exp-date i { font-size: 0.9rem; }
+
+.exp-type {
+    font-family: "Inter", sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.exp-role {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.exp-company {
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--grad-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.exp-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exp-points li {
+    font-family: "Inter", sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 18px;
+    position: relative;
+}
+
+.exp-points li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #a78bfa;
+    font-size: 0.9rem;
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
 /* --- SECTION: PROJECTS --- */
 #Project {
     padding: 100px 6rem 80px;
@@ -809,6 +968,22 @@ footer {
     /* Skills */
     #Skills { padding: 80px 2rem; }
     .section-title { font-size: 2.2rem; }
+
+    /* Experience */
+    #Experience { padding: 80px 1.5rem; }
+
+    .exp-card {
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 16px;
+    }
+
+    .exp-left {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .exp-line { display: none; }
 
     /* Projects */
     #Project { padding: 80px 1.5rem; }
